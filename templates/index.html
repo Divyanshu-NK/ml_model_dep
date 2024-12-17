@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Credit Worthiness Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Farmer Credit Worthiness</h1>
+        <form method="POST">
+            <label for="Crop_Type">Crop Type:</label>
+            <select id="Crop_Type" name="Crop_Type" required>
+                <option value="Cotton">Cotton</option>
+                <option value="Carrot">Carrot</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Rice">Rice</option>
+            </select>
+
+            <label for="Farm_Area">Farm Area (in acres):</label>
+            <input type="number" step="0.01" id="Farm_Area" name="Farm_Area" required>
+
+            <label for="Irrigation_Type">Irrigation Type:</label>
+            <select id="Irrigation_Type" name="Irrigation_Type" required>
+                <option value="Sprinkler">Sprinkler</option>
+                <option value="Manual">Manual</option>
+                <option value="Flood">Flood</option>
+                <option value="Rain-fed">Rain-fed</option>
+            </select>
+
+            <label for="Fertilizer_Used">Fertilizer Used (kg):</label>
+            <input type="number" step="0.01" id="Fertilizer_Used" name="Fertilizer_Used" required>
+
+            <label for="Pesticide_Used">Pesticide Used (kg):</label>
+            <input type="number" step="0.01" id="Pesticide_Used" name="Pesticide_Used" required>
+
+            <label for="Yield">Yield (in quintals):</label>
+            <input type="number" step="0.01" id="Yield" name="Yield" required>
+
+            <label for="Soil_Type">Soil Type:</label>
+            <select id="Soil_Type" name="Soil_Type" required>
+                <option value="Loamy">Loamy</option>
+                <option value="Peaty">Peaty</option>
+                <option value="Silty">Silty</option>
+                <option value="Clay">Clay</option>
+            </select>
+
+            <label for="Season">Season:</label>
+            <select id="Season" name="Season" required>
+                <option value="Kharif">Kharif</option>
+                <option value="Zaid">Zaid</option>
+            </select>
+
+            <label for="Water_Usage">Water Usage (in liters):</label>
+            <input type="number" step="0.01" id="Water_Usage" name="Water_Usage" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Predicted Credit Score: {{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

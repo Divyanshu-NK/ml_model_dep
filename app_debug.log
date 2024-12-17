@@ -1,0 +1,32 @@
+2024-12-08 06:08:29,486 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-08 06:08:29,487 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-08 06:08:29,490 - INFO -  * Restarting with stat
+2024-12-08 06:08:31,925 - WARNING -  * Debugger is active!
+2024-12-08 06:08:31,931 - INFO -  * Debugger PIN: 485-042-332
+2024-12-08 06:08:53,178 - INFO - 127.0.0.1 - - [08/Dec/2024 06:08:53] "GET / HTTP/1.1" 200 -
+2024-12-08 06:09:15,712 - DEBUG - Received form data: {'Crop_Type': 'Wheat', 'Farm_Area': '345', 'Irrigation_Type': 'Sprinkler', 'Fertilizer_Used': '4.99', 'Pesticide_Used': '3', 'Yield': '77.99', 'Soil_Type': 'Loamy', 'Season': 'Rabi', 'Water_Usage': '456789'}
+2024-12-08 06:09:15,713 - DEBUG - Input data processed successfully
+2024-12-08 06:09:15,726 - DEBUG - DataFrame created:   Crop_Type  Farm_Area Irrigation_Type  Fertilizer_Used  Pesticide_Used  Yield Soil_Type Season  Water_Usage
+0     Wheat      345.0       Sprinkler             4.99             3.0  77.99     Loamy   Rabi     456789.0
+2024-12-08 06:09:15,794 - DEBUG - Features prepared:   Crop_Type  Farm_Area Irrigation_Type  Fertilizer_Used  Pesticide_Used Soil_Type Season  Water_Usage
+0     Wheat      345.0       Sprinkler             4.99             3.0     Loamy   Rabi     456789.0
+2024-12-08 06:09:15,833 - DEBUG - Available label encoder classes: ['Kharif' 'Rabi' 'Zaid']
+2024-12-08 06:09:15,835 - ERROR - Encoding error for Crop_Type: y contains previously unseen labels: 'Wheat'
+2024-12-08 06:09:15,837 - INFO - 127.0.0.1 - - [08/Dec/2024 06:09:15] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2024-12-08 06:10:32,362 - INFO - 127.0.0.1 - - [08/Dec/2024 06:10:32] "GET / HTTP/1.1" 200 -
+2024-12-08 06:11:09,155 - DEBUG - Received form data: {'Crop_Type': 'Rice', 'Farm_Area': '345', 'Irrigation_Type': 'Sprinkler', 'Fertilizer_Used': '5', 'Pesticide_Used': '3.99', 'Yield': '44.99', 'Soil_Type': 'Clay', 'Season': 'Kharif', 'Water_Usage': '342356'}
+2024-12-08 06:11:09,156 - DEBUG - Input data processed successfully
+2024-12-08 06:11:09,158 - DEBUG - DataFrame created:   Crop_Type  Farm_Area Irrigation_Type  Fertilizer_Used  Pesticide_Used  Yield Soil_Type  Season  Water_Usage
+0      Rice      345.0       Sprinkler              5.0            3.99  44.99      Clay  Kharif     342356.0
+2024-12-08 06:11:09,205 - DEBUG - Features prepared:   Crop_Type  Farm_Area Irrigation_Type  Fertilizer_Used  Pesticide_Used Soil_Type  Season  Water_Usage
+0      Rice      345.0       Sprinkler              5.0            3.99      Clay  Kharif     342356.0
+2024-12-08 06:11:09,249 - DEBUG - Available label encoder classes: ['Kharif' 'Rabi' 'Zaid']
+2024-12-08 06:11:09,251 - ERROR - Encoding error for Crop_Type: y contains previously unseen labels: 'Rice'
+2024-12-08 06:11:09,252 - INFO - 127.0.0.1 - - [08/Dec/2024 06:11:09] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2024-12-08 06:15:30,279 - INFO -  * Detected change in 'C:\\Users\\divya\\Desktop\\ml_model_dep\\app.py', reloading
+2024-12-08 06:15:31,213 - INFO -  * Restarting with stat
+2024-12-08 06:15:35,571 - WARNING -  * Debugger is active!
+2024-12-08 06:15:35,579 - INFO -  * Debugger PIN: 485-042-332
+2024-12-08 06:18:08,310 - INFO -  * Detected change in 'C:\\Users\\divya\\Desktop\\ml_model_dep\\app.py', reloading
+2024-12-08 06:18:08,694 - INFO -  * Restarting with stat
